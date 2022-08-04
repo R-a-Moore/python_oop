@@ -20,8 +20,8 @@ class Reptile(Animal): # Reptile is the child class, Animal is the parent/superc
         return "The", self.species_name, "uses its venom"
 
 
-# creates an instance of the reptile class which is an inherited class of animal
-a_reptile = Reptile()
-# prints the behaviour methods of the reptile & from the inherited animal through reptile
-print(a_reptile.seek_heat())
-print(a_reptile.move())
+# # creates an instance of the reptile class which is an inherited class of animal
+# a_reptile = Reptile()
+# # prints the behaviour methods of the reptile & from the inherited animal through reptile
+# print(a_reptile.seek_heat())
+# print(a_reptile.move())

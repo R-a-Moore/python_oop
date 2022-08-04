@@ -19,10 +19,14 @@ class Snake(Reptile): # inherited class of Reptile named Snake
 
 
     def __expand_jaw(self): # in encapsulation, this is a private method
-        return "The", self.species_name, "opens its jaw"
+            return "The", self.species_name, "opens its jaw"
 
     def call_expand_jaw(self):
-        return self.__expand_jaw()
+        try: # this is a try except function, which is like a if statement, but returns errors & exceptions instead (think try catch statment in C#
+            return self.__expand_jaw()
+        except:# this  is the exception that the try throws
+            print("no no snake for you")
+
 
 # object, which is an instance of the Snake class
 snake_object = Snake()
@@ -32,3 +36,4 @@ print(snake_object.smell())
 print(snake_object._slither())
 #print(snake_object.__expand_jaw()) this method cannot be called outside of the clss because it is private, so running this line will result in an error
 print(snake_object.call_expand_jaw()) # however this will work, because it is calling a public method, which calls the expand_jaw method. because they are both within the same class the expand_jaw method is not encapsulated against it.
+print(snake_object.call_expand_jaw())
